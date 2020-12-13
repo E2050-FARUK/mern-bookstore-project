@@ -2,10 +2,13 @@
   "name": "mern-bookstore-project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js",
+    "start-client": "npm start --prefix client",
+    "develop": "concurrently"
   },
   "repository": {
     "type": "git",
@@ -20,11 +23,14 @@
   "homepage": "https://github.com/E2050-FARUK/mern-bookstore-project#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "concurrently": "^5.3.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-validator": "^6.8.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.11.6",
+    "mongoose": "^5.11.6"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.6"
   }
 }
